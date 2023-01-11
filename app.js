@@ -13,28 +13,32 @@ class Library {
     this.books = [];
   }
 
-markRead(chkbx, id) {
-    //Loop thru library books
+markRead(id) {
     for (let i = 0;  i < this.bookCount.length;  i++)
     {
          if (this.books[i].id === id) {
              this.books[i].isRead = true;
-             // CHANGE HTML ckbox chked attr to TRUE 
-                break;
+             
+             // CHANGE HTML ckbox chked attr to TRUE
+           isRead.checked = checked;
+           
+             break;
             }
     }    
   }
 
  addBook(id, txtTitle, txtAuthor, isRead) {
-    console.log("I will add a book to the library");
-    //create new book - passing in values
-     this.books.push(new Book(id, txtTitle, txtAuthor, false)); 
-    //Create new HTML table row with Title, Author & Read properties
-     newRow = `<tr><td>{txtTitle}</td><td>{txtAuthor}</td><td>{true}</td></tr>`;
-    //Append the Row to the table
-     table.appendRow //? How do you write this in code?
+   this.books.push(new Book(id, txtTitle, txtAuthor, false)); 
+   
+   //Create new HTML table row with Title, Author & Read properties
+     row = `<tr><td>{txtTitle}</td><td>{txtAuthor}</td><td>{false}</td></tr>`;
+   
+     //Append the Row to the HTML table
+   let table = document.getElementById("table");
+   let row = table.insertRow(-1);
+   
     //Increment Library BookCount +1  
-     this.BookCount++;
+     this.bookCount++;
   }
 
     removeBook(id) {
