@@ -18,6 +18,7 @@
         <h1>Library Project</h1>
         <div id="library">
           <!-- Add table here -->
+          <form></form>
           <table id="table" style="min-width: 680px; margin: 2rem">
             <thead>
               <tr>
@@ -30,21 +31,18 @@
               <tr>
                 <td><label for="txtName">Name: </label><input type="text" id="txtName"></td>
                 <td><label for="txtAuthor">Author: </label><input type="text" id="txtAuthor"></td>
-                <td>
-                  <input
-                    type="checkbox"
-                    name="isRead"
-                    id="isRead" />
+                <td><input type="checkbox" name="isRead" id="isRead" />
                 </td>
                  <td>
                   <input
-                    type="submit"  title="btnAddBook" onclick="addBook(txtName.value, txtAuthor.value, isRead )"           
+                    type="submit"  title="btnAddBook" onclick="addBook(txtName.value, txtAuthor.value, isRead.checked)"           
                   />
                 </td>
               </tr>
 
             </tbody>
           </table>
+          </form>
         </div>
     </main>
 <div id="demo"></div>
